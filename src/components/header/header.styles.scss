@@ -34,19 +34,21 @@ header {
 
   .header-box {
     position: absolute;
-    // 40 percent from the left side element
+    // 40 percent from the left side in relation of the parent element
     top: 40%;
-    // 50 percent from the top side element
+    // 50 percent from the top side element in relation of the parent element
     left: 50%;
     // to get the middle of the element
     transform: translate(-50%, -50%);
+    text-align: center;
 
     .header-primary {
       color: #ffff;
       text-transform: uppercase;
 
       // back part behind the element will be hidden
-      backface-visibility: hidden; 
+      backface-visibility: hidden;
+      margin-bottom: 50px;
 
       span {
         display: block;
@@ -72,6 +74,11 @@ header {
         // shorthand
         animation: moveInRight 2s ease-out;
       }
+    }
+
+    .btn {
+      animation: moveInBottom .5s ease-out .75s;
+      animation-fill-mode: backwards;
     }
   }
 }
@@ -106,4 +113,65 @@ header {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white:link,
+.btn-white:visited {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }

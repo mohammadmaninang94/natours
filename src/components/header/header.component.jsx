@@ -12,6 +12,7 @@ const Header = () => (
                 <span className='heading-primary-main'>Outdoors</span>
                 <span className='heading-primary-sub'>is where life happens</span>
             </h1>
+            <a href='#discover' className='btn btn-white'>Discover our tours</a>
         </div>
     </header>
 );
