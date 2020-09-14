@@ -1,0 +1,109 @@
+/*
+COLORS:
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+*/
+
+header {
+  height: 95vh; // at every point 95 % viewport height
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(85, 197, 122, 0.8)
+    ),
+    url("/img/hero.jpg");
+  background-size: cover; // whatever the width of the view port or the element it will fit
+  background-position: top;
+  position: relative;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 75vh,
+    0 100%
+  ); // demo site https://bennettfeely.com/clippy/
+
+  .logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    .logo {
+      height: 35px;
+    }
+  }
+
+  .header-box {
+    position: absolute;
+    // 40 percent from the left side element
+    top: 40%;
+    // 50 percent from the top side element
+    left: 50%;
+    // to get the middle of the element
+    transform: translate(-50%, -50%);
+
+    .header-primary {
+      color: #ffff;
+      text-transform: uppercase;
+
+      // back part behind the element will be hidden
+      backface-visibility: hidden; 
+
+      span {
+        display: block;
+      }
+
+      .heading-primary-main {
+        font-size: 60px;
+        font-weight: 400;
+        letter-spacing: 35px;
+
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        // animation-iteration-count: 3;
+        // animation-delay: 3s;
+      }
+
+      .heading-primary-sub {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 17.4px;
+
+        // shorthand
+        animation: moveInRight 2s ease-out;
+      }
+    }
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
