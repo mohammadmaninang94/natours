@@ -1,7 +1,13 @@
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   border: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -12,10 +18,12 @@ body {
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 1.6rem; */
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
+
+  box-sizing: border-box;
 }
 
 code {
