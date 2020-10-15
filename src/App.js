@@ -1,14 +1,16 @@
 import React, { Fragment } from 'react';
 import Header from './components/header/header.component';
-import Main from './components/main/main.component';
+import SectionAbout from './components/section-about/section-about.component';
 import FeaturesSection from './components/section-features/section-features.component';
+import SectionTours from './components/section-tours/section-tours.component';
 
 function App() {
   return (
     <Fragment>
       <Header />
-      <Main />
+      <SectionAbout />
       <FeaturesSection />
+      <SectionTours />
     </Fragment>
   );
 }

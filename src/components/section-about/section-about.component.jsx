@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Main = () => (
+const SectionAbout = () => (
     <main>
         <section className='section-about'>
             <div className='u-center-text u-margin-bottom-big'>
@@ -26,4 +26,4 @@ const Main = () => (
     </main>
 );
 
-export default Main;
+export default SectionAbout;
