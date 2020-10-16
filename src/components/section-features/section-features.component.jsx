@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FeaturesSection = () => (
+const SectionFeatures = () => (
     <section className='section-features'>
         <div className='row'>
             <div className='col-1-of-4'>
@@ -35,4 +35,4 @@ const FeaturesSection = () => (
     </section>
 );
 
-export default FeaturesSection;
+export default SectionFeatures;
