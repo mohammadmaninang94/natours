@@ -4,8 +4,16 @@ import StoryBox from '../story-box/story-box.components';
 
 import stories from './stories';
 
+// mp4 and webm we need these 2 formats to make sure it works for all browsers
 const SectionStories = () => (
-    <section className='section-tours'>
+    <section className='section-stories'>
+        <div className='bg-video'>
+            <video className='bg-video__content' autoPlay muted loop>              
+                <source src='img/video.mp4' type='video/mp4' />  
+                <sorce src='img/video.webm' type='video/webm' /> 
+                Your browser is not supported!
+            </video>
+        </div>
         <div className='u-center-text u-margin-bottom-big'>
             <h2 className='heading-secondary'>We make people genuinely happy</h2>
         </div>
