@@ -10,16 +10,16 @@ const SectionStories = () => (
         <div className='bg-video'>
             <video className='bg-video__content' autoPlay muted loop>              
                 <source src='img/video.mp4' type='video/mp4' />  
-                <sorce src='img/video.webm' type='video/webm' /> 
+                <source src='img/video.webm' type='video/webm' /> 
                 Your browser is not supported!
             </video>
         </div>
         <div className='u-center-text u-margin-bottom-big'>
             <h2 className='heading-secondary'>We make people genuinely happy</h2>
         </div>
-        {stories.map(({ ...props }) => (
-            <div className='row'>
-                <StoryBox {...props} />
+        {stories.map(({name, ...props }) => (
+            <div key={name} className='row'>
+                <StoryBox name={name} {...props} />
             </div>
         ))}
         <div className='u-center-text u-margin-top-huge'>

@@ -4,6 +4,7 @@ import SectionAbout from './components/section-about/section-about.component';
 import SectionFeatures from './components/section-features/section-features.component';
 import SectionTours from './components/section-tours/section-tours.component';
 import SectionStory from './components/section-stories/section-stories.component';
+import SectionBook from './components/section-book/section-book.component';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <SectionFeatures />
       <SectionTours />
       <SectionStory />
+      <SectionBook />
     </Fragment>
   );
 }
