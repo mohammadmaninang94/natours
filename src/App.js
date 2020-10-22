@@ -5,16 +5,20 @@ import SectionFeatures from './components/section-features/section-features.comp
 import SectionTours from './components/section-tours/section-tours.component';
 import SectionStory from './components/section-stories/section-stories.component';
 import SectionBook from './components/section-book/section-book.component';
+import Footer from './components/footer/footer.component';
 
 function App() {
   return (
     <Fragment>
       <Header />
-      <SectionAbout />
-      <SectionFeatures />
-      <SectionTours />
-      <SectionStory />
-      <SectionBook />
+      <main>
+        <SectionAbout />
+        <SectionFeatures />
+        <SectionTours />
+        <SectionStory />
+        <SectionBook />
+      </main>
+      <Footer />
     </Fragment>
   );
 }
