@@ -7,6 +7,7 @@ import SectionTours from './components/section-tours/section-tours.component';
 import SectionStory from './components/section-stories/section-stories.component';
 import SectionBook from './components/section-book/section-book.component';
 import Footer from './components/footer/footer.component';
+import Popup from './components/popup/popup.component';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <SectionBook />
       </main>
       <Footer />
+      <Popup />
     </Fragment>
   );
 }
