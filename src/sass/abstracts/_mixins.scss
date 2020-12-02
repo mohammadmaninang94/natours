@@ -6,9 +6,41 @@
   }
 }
 
-@mixin absoluteCenter() {
+@mixin absoluteCenter($scale) {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) $scale;
+}
+
+//  MEDIA QUERY MANAGER AND BREAKPOINTS
+/*
+0 - 600px:    Phone               phone
+600 - 900px:  Tablet portrait     tab-port
+900 - 1200px: Tablet landscape    tab-land
+1200 - 1800:  Normal stles apply  
+1800px +:     Big Desktop         big-desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  } 
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
 }

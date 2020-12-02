@@ -17,7 +17,7 @@ const SectionTours = () => (
             ))}
         </div>
         <div className='u-center-text u-margin-top-huge'>
-            <a href='#x' className='btn btn--green'>Discover all tours</a>
+            <a href='#popup' className='btn btn--green'>Discover all tours</a>
         </div>
     </section>
 );

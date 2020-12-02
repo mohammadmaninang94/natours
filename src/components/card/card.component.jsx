@@ -24,7 +24,7 @@ const Card = ({ cardNo, title, details, price }) => (
                     <p className='card__price-only'>Only</p>
                     <p className='card__price-value'>${price}</p>
                 </div>
-                <a href='#a' className='btn btn--white'>Book now!</a>
+                <a href='#popup' className='btn btn--white'>Book now!</a>
             </div>
         </div>
     </div>
