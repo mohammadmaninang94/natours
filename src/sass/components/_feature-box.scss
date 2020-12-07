@@ -8,6 +8,10 @@
   transition: transform 0.3s;
   backface-visibility: hidden;
 
+  @include respond(tab-port){
+    padding: 2rem;
+  }
+
   &__icon {
     font-size: 6rem;
     margin-bottom: 0.5rem;

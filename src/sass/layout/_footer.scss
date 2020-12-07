@@ -10,6 +10,10 @@
   &__logo-box {
     text-align: center; // img where inline element behaves like text
     margin-bottom: 8rem;
+
+    @include respond(tab-port){
+      margin-bottom: 6rem;
+    }
   }
 
   &__logo {
