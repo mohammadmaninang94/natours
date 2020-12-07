@@ -20,6 +20,10 @@
 900 - 1200px: Tablet landscape    tab-land
 1200 - 1800:  Normal stles apply  
 1800px +:     Big Desktop         big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
 */
 
 @mixin respond($breakpoint) {
