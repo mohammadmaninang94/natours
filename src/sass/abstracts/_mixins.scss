@@ -15,6 +15,7 @@
 
 //  MEDIA QUERY MANAGER AND BREAKPOINTS
 /*
+- 425px:      Mobile              mobile
 0 - 600px:    Phone               phone
 600 - 900px:  Tablet portrait     tab-port
 900 - 1200px: Tablet landscape    tab-land
@@ -27,6 +28,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 26.5625em) {
+      @content;
+    }
+  } 
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
       @content;
