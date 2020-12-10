@@ -4,9 +4,9 @@ const Footer = () => (
     <footer className='footer'>
         <div className='footer__logo-box'>
             <picture className='footer__logo'>
-                <source srcset='img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x' 
+                <source srcSet='img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x' 
                     media='(max-width: 37.5em)'/>
-                <img srcset='img/logo-green-1x.png 1x, img/logo-green-2x.png 2x' alt='Full Logo' />
+                <img src="img/logo-green-2x.png" srcSet='img/logo-green-1x.png 1x, img/logo-green-2x.png 2x' alt='Full Logo' />
             </picture>
 
         </div>
