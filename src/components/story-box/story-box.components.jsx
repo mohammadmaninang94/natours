@@ -1,9 +1,9 @@
 import React from 'react';
 
-const StoryBox = ({name, img, title, story}) => (
+const StoryBox = ({name, src, title, story}) => (
     <div className='story'>
         <figure className='story__shape'>
-            <img src={img} alt='person on a tour' className='story__img' />
+            <img src={src} alt='person on a tour' className='story__img' />
             <figcaption className='story__caption'>{name}</figcaption>
         </figure>
         <div className='story__text'>

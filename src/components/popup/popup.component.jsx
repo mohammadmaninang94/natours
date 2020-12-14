@@ -4,8 +4,16 @@ const Popup = () => (
     <div className='popup' id='popup'>
         <div className='popup__content'>
             <div className='popup__left'>
-                <img src='img/nat-8.jpg' alt='River tour' className='popup__img' />
-                <img src='img/nat-9.jpg' alt='Mountain tour' className='popup__img' />
+                <img 
+                srcSet='img/nat-8-small.jpg 656w, img/nat-8.jpg 974w'
+                sizes='(min-width: 112.5em) 25vw, 300px'
+                src='img/nat-8.jpg' 
+                alt='River tour' className='popup__img' />
+                <img 
+                srcSet='img/nat-9-small.jpg 611w, img/nat-9.jpg 1008w'
+                sizes='(min-width: 112.5em) 25vw, 300px'
+                src='img/nat-9.jpg' 
+                alt='Mountain tour' className='popup__img' />
             </div>
             <div className='popup__right'>
                 <a href='#section-tours' className='popup__close'>&times;</a>
