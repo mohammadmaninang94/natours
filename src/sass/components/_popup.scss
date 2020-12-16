@@ -10,6 +10,11 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  @supports (backdrop-filter: blur(10px)){
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, 0.3);
+  } 
+  
   @include respond(tab-land) {
     text-align: center;
   }

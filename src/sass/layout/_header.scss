@@ -16,7 +16,9 @@
     0 100%
   ); // demo site https://bennettfeely.com/clippy/
 
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (min-width: 125em) {
     // will dislay on higher resolution screen and bigger than phone
     // will display if screen hits 2000 px or large desktops even if resolution is low
     background-image: linear-gradient(
